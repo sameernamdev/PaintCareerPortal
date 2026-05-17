@@ -1,0 +1,393 @@
+.applyPage{
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#EEF8FA;
+
+    padding:140px 5% 80px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+/* BLURS */
+
+.applyPage::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    background:
+    rgba(205,238,238,0.45);
+
+    filter:blur(100px);
+
+    top:-180px;
+    left:-180px;
+}
+
+.applyPage::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+    height:350px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,181,126,0.25);
+
+    filter:blur(100px);
+
+    bottom:-150px;
+    right:-150px;
+}
+
+/* HEADER */
+
+.applyHeader{
+
+    width:90%;
+
+    max-width:1300px;
+
+    position:fixed;
+
+    top:25px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:100;
+
+    padding:18px 30px;
+
+    border-radius:28px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:
+    rgba(255,255,255,0.35);
+
+    backdrop-filter:blur(18px);
+
+    border:
+    1px solid rgba(255,255,255,0.45);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,0.05);
+}
+
+/* LOGO */
+
+.applyLogo{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    color:#2F3B45;
+
+    font-family:'Outfit',sans-serif;
+}
+
+/* BUTTON */
+
+.backBtn{
+
+    padding:15px 28px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8FDCE6,
+        #63D1BE
+    );
+
+    color:#1F2937;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 15px 35px rgba(143,220,230,0.28);
+    cursor: none;
+}
+
+/* HOVER */
+
+.backBtn:hover{
+
+    transform:
+    translateY(-4px);
+}
+
+/* FORM */
+
+.applyForm{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:50px;
+
+    border-radius:36px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    background:
+    rgba(255,255,255,0.38);
+
+    backdrop-filter:blur(24px);
+
+    border:
+    1px solid rgba(255,255,255,0.45);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.05);
+
+    position:relative;
+
+    z-index:2;
+}
+
+/* TAG */
+
+.applyForm > span{
+
+    display:inline-block;
+
+    width:fit-content;
+
+    padding:10px 20px;
+
+    border-radius:40px;
+
+    background:
+    rgba(255,255,255,0.45);
+
+    border:
+    1px solid rgba(255,255,255,0.45);
+
+    color:#7C8A96;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+}
+
+/* TITLE */
+
+.applyForm h1{
+
+    font-size:58px;
+
+    line-height:1;
+
+    color:#2F3B45;
+
+    font-family:'Outfit',sans-serif;
+}
+
+/* TEXT */
+
+.applyForm p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#6B7280;
+
+    margin-bottom:10px;
+}
+
+/* INPUTS */
+
+.applyForm input,
+.applyForm textarea{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    rgba(255,255,255,0.55);
+
+    border:
+    1px solid rgba(255,255,255,0.5);
+
+    font-size:15px;
+
+    color:#2F3B45;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+/* FOCUS */
+
+.applyForm input:focus,
+.applyForm textarea:focus{
+
+    border:
+    1px solid #8FDCE6;
+
+    background:white;
+}
+
+/* TEXTAREA */
+
+.applyForm textarea{
+
+    height:160px;
+
+    resize:none;
+}
+
+/* FILE */
+
+.applyForm input[type="file"]{
+
+    padding:14px;
+
+    cursor:pointer;
+}
+
+/* BUTTON */
+
+.applyForm button{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:60px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8FDCE6,
+        #63D1BE
+    );
+
+    color:#1F2937;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    font-family:'Outfit',sans-serif;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 18px 40px rgba(143,220,230,0.25);
+}
+
+/* HOVER */
+
+.applyForm button:hover{
+
+    transform:
+    translateY(-5px);
+
+    box-shadow:
+    0 24px 55px rgba(99,209,190,0.25);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .applyPage{
+
+        padding:130px 5% 70px;
+    }
+
+    .applyHeader{
+
+        width:94%;
+
+        padding:16px 20px;
+    }
+
+    .applyLogo{
+
+        font-size:26px;
+    }
+
+    .applyForm{
+
+        padding:35px;
+    }
+
+    .applyForm h1{
+
+        font-size:42px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .applyHeader{
+
+        flex-direction:column;
+
+        gap:16px;
+    }
+
+    .applyForm{
+
+        padding:28px;
+    }
+
+    .applyForm h1{
+
+        font-size:34px;
+    }
+
+    .backBtn{
+
+        width:100%;
+
+        text-align:center;
+    }
+
+}

@@ -1,0 +1,342 @@
+.benefitsSection{
+
+    width:100%;
+
+    padding:120px 8%;
+
+    background:#EEF8FA;
+}
+
+/* HEADING */
+
+.benefitsHeading{
+
+    text-align:center;
+
+    max-width:850px;
+
+    margin:auto;
+
+    margin-bottom:70px;
+}
+
+.benefitsHeading > span{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:40px;
+
+    background:
+    rgba(255,255,255,0.45);
+
+    backdrop-filter:blur(12px);
+
+    color:#7C8A96;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:24px;
+}
+
+/* TITLE */
+
+.benefitsHeading h1{
+
+    font-size:58px;
+
+    line-height:1;
+
+    color:#2F3B45;
+
+    font-family:'Outfit',sans-serif;
+
+    margin-bottom:24px;
+}
+
+/* GRADIENT */
+
+.benefitsHeading h1 span{
+
+    display:block;
+
+    margin-top:10px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8FDCE6,
+        #63D1BE
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+    font-size:68px;
+}
+
+/* DESC */
+
+.benefitsHeading p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#6B7280;
+}
+
+/* GRID */
+
+.benefitsGrid{
+
+    display:grid;
+
+    grid-template-columns:
+    1.2fr 1fr 1fr;
+
+  grid-auto-rows:minmax(230px,auto);    
+
+    gap:22px;
+}
+
+/* COMMON CARD */
+
+.benefitCard{
+
+    border-radius:34px;
+
+    padding:32px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:0.4s;
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,0.05);
+}
+
+/* HOVER */
+
+.benefitCard:hover{
+
+    transform:
+    translateY(-10px);
+}
+
+/* COLORS */
+
+.salary{
+
+    background:#E8E0F8;
+}
+
+.health{
+
+    background:#FFDCE8;
+}
+
+.leave{
+
+    background:#FFF5D6;
+}
+
+.growth{
+
+    background:#E4F4E1;
+}
+
+.culture{
+
+    background:#FFE8D8;
+}
+
+.reward{
+
+    background:#E8F1F8;
+}
+
+/* LAYOUT */
+
+.salary{
+
+    grid-column:1/2;
+    grid-row:1/3;
+}
+
+.health{
+
+    grid-column:2/4;
+    grid-row:1/2;
+}
+
+.leave{
+
+    grid-column:2/3;
+    grid-row:2/3;
+}
+
+.growth{
+
+    grid-column:3/4;
+    grid-row:2/3;
+}
+
+.culture{
+
+    grid-column:1/3;
+    grid-row:3/4;
+}
+
+.reward{
+
+    grid-column:3/4;
+    grid-row:3/4;
+}
+
+/* ICON */
+
+.benefitIcon{
+
+    width:72px;
+    height:72px;
+
+    border-radius:24px;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+    rgba(255,255,255,0.45);
+
+    font-size:28px;
+
+    margin-bottom:28px;
+
+    color:#2F3B45;
+}
+
+/* TITLE */
+
+.benefitCard h2{
+
+    font-size:30px;
+
+    /* line-height:1.05; */
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+    font-family:'Outfit',sans-serif;
+
+    max-width:320px;
+}
+
+/* DESCRIPTION */
+
+.benefitCard p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    color:#5B6B7C;
+
+    max-width:340px;
+}
+
+/* IMAGE STYLE */
+
+.benefitCard::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,0.22);
+
+    right:-40px;
+    bottom:-40px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+    .benefitsGrid{
+
+        grid-template-columns:
+        1fr 1fr;
+
+        grid-template-rows:auto;
+    }
+
+    .salary,
+    .health,
+    .leave,
+    .growth,
+    .culture,
+    .reward{
+
+        grid-column:auto;
+        grid-row:auto;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .benefitsSection{
+
+        padding:100px 5%;
+    }
+
+    .benefitsHeading h1,
+    .benefitsHeading h1 span{
+
+        font-size:52px;
+    }
+
+    .benefitsGrid{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .benefitsHeading h1,
+    .benefitsHeading h1 span{
+
+        font-size:40px;
+    }
+
+    .benefitCard{
+
+        padding:28px;
+    }
+
+    .benefitCard h2{
+
+        font-size:34px;
+    }
+
+}

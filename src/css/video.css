@@ -1,0 +1,233 @@
+.videoSection{
+
+    width:100%;
+
+    padding:120px 8%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fafc
+    );
+}
+
+/* CONTAINER */
+
+.videoContainer{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+/* LEFT */
+
+.videoLeft span{
+
+    display:inline-block;
+
+    padding:12px 22px;
+
+    border-radius:40px;
+
+    background:
+    rgba(14,165,233,0.10);
+
+    color:#0284c7;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+}
+
+.videoLeft h1{
+
+    font-size:72px;
+
+    line-height:1.05;
+
+    font-weight:900;
+
+    color:#0f172a;
+
+    margin-bottom:30px;
+}
+
+.videoLeft p{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    color:#475569;
+
+    margin-bottom:40px;
+}
+
+/* STATS */
+
+.videoStats{
+
+    display:flex;
+
+    gap:25px;
+}
+
+.videoStatCard{
+
+    background:white;
+
+    padding:25px 35px;
+
+    border-radius:24px;
+
+    border:
+    1px solid #e2e8f0;
+
+    box-shadow:
+    0 10px 30px rgba(15,23,42,0.06);
+
+    transition:0.4s;
+}
+
+.videoStatCard:hover{
+
+    transform:
+    translateY(-8px);
+}
+
+.videoStatCard h2{
+
+    font-size:36px;
+
+    color:#0ea5e9;
+
+    margin-bottom:10px;
+}
+
+.videoStatCard p{
+
+    margin:0;
+
+    font-size:15px;
+
+    color:#64748b;
+}
+
+/* RIGHT */
+
+.videoRight{
+
+    position:relative;
+}
+
+/* VIDEO BOX */
+
+.videoBox{
+
+    position:relative;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    background:white;
+
+    padding:10px;
+
+    box-shadow:
+    0 25px 60px rgba(15,23,42,0.12);
+    /* border: 2px solid red; */
+}
+
+.videoBox::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+    background:
+    radial-gradient(
+        rgba(14,165,233,0.20),
+        transparent
+    );
+
+    top:-80px;
+    right:100px;
+
+    z-index:0;
+}
+
+.videoBox video{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    border-radius:24px;
+
+    display:block;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .videoLeft h1{
+        font-size:58px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .videoContainer{
+
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .videoSection{
+        padding:90px 5%;
+    }
+
+    .videoLeft h1{
+        font-size:42px;
+    }
+
+    .videoLeft p{
+        font-size:17px;
+    }
+
+    .videoStats{
+
+        flex-direction:column;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .videoLeft h1{
+        font-size:34px;
+    }
+
+}
