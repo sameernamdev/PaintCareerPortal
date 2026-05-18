@@ -8,27 +8,25 @@ function App() {
 
   return (
     <>
-      <AnimatedCursor
+     {
+  window.innerWidth > 768 && (
 
-        innerSize={10}
+    <AnimatedCursor
 
-        outerSize={35}
+      innerSize={10}
 
-        // color='255,159,92'
+      outerSize={35}
 
-        outerAlpha={0.2}
+      outerAlpha={0.2}
 
-        innerScale={0.7}
+      innerScale={0.7}
 
-        outerScale={2}
+      outerScale={2}
 
-        clickables={[
-          'a',
-          'button',
-          '.link'
-        ]}
+    />
 
-      />
+  )
+}
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
