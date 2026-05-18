@@ -57,7 +57,7 @@ export default function Hero(){
 
                     <span>
 
-                        PAINT YOUR FUTURE
+                        PAINT YOUR FUTURE WITH US AND GROW
 
                     </span>
 
